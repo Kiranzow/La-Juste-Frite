@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Merci</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff3cd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background: white;
+            width: 90%;
+            max-width: 400px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>🍟 Merci ! 🍟</h1>
+    <p id="message"></p>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+
+    const nom = params.get("nom");
+    const prenom = params.get("prenom");
+    const poids = params.get("poids");
+
+    document.getElementById("message").innerHTML =
+        "Merci <strong>" + prenom + " " + nom + "</strong> !<br><br>" +
+        "Tu as estimé la barquette à <strong>" + poids + " grammes</strong>.";
+</script>
+
+</body>
+</html>
