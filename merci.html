@@ -24,6 +24,15 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            width: 120px; /* taille adaptée téléphone */
+            height: auto;
+            margin-top: 20px; /* espace au-dessus du logo */
         }
     </style>
 </head>
@@ -33,6 +42,9 @@
 <div class="card">
     <h1>🍟 Merci ! 🍟</h1>
     <p id="message"></p>
+
+    <!-- Logo en bas -->
+    <img src="logo.png" alt="Logo Foodtruck" class="logo">
 </div>
 
 <script>
