@@ -29,10 +29,60 @@
             align-items: center;
         }
 
-        .logo {
-            width: 120px; /* taille adaptée téléphone */
+        /* Bloc texte asso */
+        .asso-text {
+            text-align: justify;   /* JUSTIFIER le texte */
+            margin-top: 20px;        
+            font-size: 16px;         
+            line-height: 1.5;        
+            color: #333;             
+            background-color: #fff8e1; 
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .asso-text p {
+            margin-bottom: 10px;
+        }
+
+        /* LISTES ALIGNÉES À GAUCHE */
+        .asso-text ul {
+            margin-left: 0;      /* supprime indentation navigateur */
+            padding-left: 20px;  /* petit retrait uniforme */
+            margin-bottom: 10px;
+        }
+
+        .asso-text ul ul {
+            margin-left: 0;      /* sous-listes alignées avec la liste principale */
+            padding-left: 20px;
+            list-style-type: disc; /* ou circle si tu préfères */
+        }
+
+        /* Bloc logos + lien central */
+        .logo-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .side-logo {
+            width: 120px;  /* Logos agrandis */
             height: auto;
-            margin-top: 20px; /* espace au-dessus du logo */
+        }
+
+        .center-link {
+            text-decoration: none;
+            color: #d9534f;  
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            padding: 0 10px;
+            flex: 1;  
         }
     </style>
 </head>
@@ -43,8 +93,35 @@
     <h1>🍟 Merci ! 🍟</h1>
     <p id="message"></p>
 
-    <!-- Logo en bas -->
-    <img src="logo.png" alt="Logo Foodtruck" class="logo">
+    <!-- Bloc logos + lien central -->
+    <div class="logo-row">
+        <img src="logo-foodtruck.png" alt="Logo Foodtruck" class="side-logo">
+        
+        <a href="https://magdala.asso.fr" target="_blank" class="center-link">
+            Visiter le site de l'asso Magdala
+        </a>
+        
+        <img src="logo-magdala.png" alt="Logo Magdala" class="side-logo">
+    </div>
+
+    <!-- Texte association en dessous -->
+    <div class="asso-text">
+        <p>Tu viens de participer à un concours organisé par le foodtruck de l'association <strong>Magdala</strong>, qui accompagne des personnes connaissant la précarité sur Lille.</p>
+
+        <p>Avec le <strong>FoodTruck Ch'ti Talent</strong>, nous réinsérons des personnes par le travail. Tu peux nous soutenir&#160;:</p>
+
+        <ul>
+            <li>En devenant bénévole</li>
+            <li>En venant manger nos plats préparés avec soin :</li>
+            <ul>
+                <li>Lundi midi : Bâtiment Rizmon</li>
+                <li>Mercredi midi : ICAM</li>
+                <li>Jeudi midi : Faculté de médecine</li>
+            </ul>
+        </ul>
+
+        <p>Tu peux nous suivre sur Instagram : <strong>ChTiTalents 📸</strong></p>
+    </div>
 </div>
 
 <script>
